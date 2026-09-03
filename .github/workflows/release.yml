@@ -60,7 +60,7 @@ jobs:
           tar -czf "release/wyrd-$WYRD_TARGET.tar.gz" -C package "wyrd-$WYRD_TARGET"
 
       - name: Frēolǣstung heald
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: wyrd-${{ matrix.target }}
           path: release/*.tar.gz
@@ -114,7 +114,7 @@ jobs:
           Compress-Archive -Path $package -DestinationPath "release/wyrd-$env:WYRD_TARGET.zip"
 
       - name: Frēolǣstung heald
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: wyrd-${{ matrix.target }}
           path: release/*.zip
@@ -128,7 +128,7 @@ jobs:
       contents: write
     steps:
       - name: Ealle fremmeras nim
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           path: release
           merge-multiple: true
