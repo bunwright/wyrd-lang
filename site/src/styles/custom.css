@@ -284,7 +284,15 @@ header.header {
 	text-shadow: 0 1px 0 #000;
 }
 
-.wyrd-code-window code { display: block; min-width: 34rem; }
+.sl-markdown-content .wyrd-code-window code {
+	display: block;
+	min-width: 34rem;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: inherit;
+}
 .wyrd-code-window .line { display: block; }
 
 .wyrd-code-window .line i {
