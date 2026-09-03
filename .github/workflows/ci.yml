@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       YANXU_VERSION: 1.1.20
-      YANXU_INSTALL_DIR: ${{ runner.temp }}/yanxu/bin
+      YANXU_INSTALL_DIR: /tmp/yanxu/bin
     steps:
       - name: Fruman nim
         uses: actions/checkout@v6
