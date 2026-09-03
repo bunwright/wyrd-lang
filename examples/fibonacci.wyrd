@@ -1,0 +1,11 @@
+cræft fib(n) dō
+    gif n <= 1 þonne
+        ġield n;
+    elles
+        ġield fib(n - 1) + fib(n - 2);
+    ende
+ende
+
+for n on rīm(0, 10) dō
+    cweþ fib(n);
+ende

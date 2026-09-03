@@ -1,0 +1,45 @@
+---
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+---
+
+<section class="wyrd-hero" aria-labelledby="wyrd-title">
+	<div class="wyrd-hero__copy">
+		<p class="wyrd-status"><span aria-hidden="true"></span> Fyrmest 0.1.0 · Open bōc</p>
+		<div class="wyrd-title-row">
+			<span class="wyrd-rune" aria-hidden="true"><i>ᚹ</i></span>
+			<h1 id="wyrd-title">Wyrd</h1>
+		</div>
+		<p class="wyrd-motto">Wrīt þæt word.<br />Bind þæt gield.<br /><em>Fylġ þǣre wyrde.</em></p>
+		<p class="wyrd-lede">Ān nīwe talusprǣc mid ealdum Ængliscum wordum—clǣne, Unicode-frum, and eall on Yanxu geworht.</p>
+		<div class="wyrd-actions">
+			<a class="wyrd-button wyrd-button--primary" href={`${base}ongin/gesetnys/`}>Wyrd geset <span aria-hidden="true">→</span></a>
+			<a class="wyrd-button wyrd-button--quiet" href="https://github.com/bunwright/wyrd-lang">Fruman geseon</a>
+		</div>
+		<dl class="wyrd-facts">
+			<div><dt>100%</dt><dd>Yanxu</dd></div>
+			<div><dt>21</dt><dd>cȳþword</dd></div>
+			<div><dt>MIT</dt><dd>līe</dd></div>
+		</dl>
+	</div>
+
+	<div class="wyrd-code-window" aria-label="Wyrd bōc and hire andswaru">
+		<header>
+			<div class="wyrd-window-lights" aria-hidden="true"><i></i><i></i><i></i></div>
+			<span>wes-hal.wyrd</span>
+			<small>UTF-8</small>
+		</header>
+		<pre><code><span class="line"><i>1</i><b>fæst</b> <em>tīd</em> = <q>"morgen"</q>;</span>
+<span class="line"><i>2</i></span>
+<span class="line"><i>3</i><b>cræft</b> <em>grēt</em>(nama) <b>dō</b></span>
+<span class="line"><i>4</i>    <b>ġield</b> <q>"Wes hāl, "</q> + nama;</span>
+<span class="line"><i>5</i><b>ende</b></span>
+<span class="line"><i>6</i></span>
+<span class="line"><i>7</i><b>gif</b> tīd == <q>"morgen"</q> <b>þonne</b></span>
+<span class="line"><i>8</i>    <b>cweþ</b> grēt(<q>"middangeard"</q>);</span>
+<span class="line"><i>9</i><b>ende</b></span></code></pre>
+		<footer>
+			<span><i aria-hidden="true">›</i> wyrd wes-hal.wyrd</span>
+			<strong>Wes hāl, middangeard</strong>
+		</footer>
+	</div>
+</section>

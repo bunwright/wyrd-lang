@@ -1,0 +1,8 @@
+# 期：15
+# 期：1
+# 期：3
+# 期：[hwæt, wyrd]
+# 期：rǣw
+引「../src/wyrd.yx」为 Wyrd；
+
+Wyrd.运行（「\n    cræft bindan(x) dō\n        cræft eacan(y) dō\n            ġield x + y;\n        ende\n        ġield eacan;\n    ende\n\n    fæst eac_tīen = bindan(10);\n    cweþ eac_tīen(5);\n\n    lǣt n = 0;\n    þāhwīle n < 5 dō\n        n = n + 1;\n        gif n == 2 þonne\n            forþ;\n        ende\n        gif n == 4 þonne\n            breċ;\n        ende\n        cweþ n;\n    ende\n\n    fæst wordhord = ["hwæt", "wyrd"];\n    cweþ wordhord;\n    cweþ cynn(wordhord);\n」）；

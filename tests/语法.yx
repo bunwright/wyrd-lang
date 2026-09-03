@@ -1,0 +1,15 @@
+# 期：3
+# 期：LET
+# 期：FUNCTION
+# 期：SAY
+引「../src/wyrd.yx」为 Wyrd；
+
+定 各句 为 Wyrd.解析（「\n    fæst twā = 2;\n    cræft twīfeald(n) dō\n        ġield n * twā;\n    ende\n    cweþ twīfeald(21);\n」）；
+
+言 长度（各句）；
+
+言 各句【0】【「种」】；
+
+言 各句【1】【「种」】；
+
+言 各句【2】【「种」】；

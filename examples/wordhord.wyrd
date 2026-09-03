@@ -1,0 +1,15 @@
+fæst wordhord = ["hwæt", "wyrd", "middangeard"];
+
+for word on wordhord dō
+    cweþ word + ": " + tōworde(lengþu(word));
+ende
+
+cræft macian_talu(upp) dō
+    lǣt n = 0;
+    þāhwīle n < upp dō
+        cweþ n;
+        n = n + 1;
+    ende
+ende
+
+macian_talu(3);

@@ -1,0 +1,34 @@
+---
+const features = [
+	{
+		number: 'I',
+		title: 'Gecyndelic stafas',
+		text: 'Wrīt þ, ð, æ, and ġ swā hīe sind. Naman and word libbaþ on Unicode fram þǣm forman stafe.',
+	},
+	{
+		number: 'II',
+		title: 'Clǣne ġewrit',
+		text: 'Lǣt, fæst, gif, and cræft sind þā word þe þū rǣtst. Nā dīgol tācn, nā unnyt byrþen.',
+	},
+	{
+		number: 'III',
+		title: 'Lifiġende cræftas',
+		text: 'Lēafscopas, eftclipung, and ġield beraþ geþōht fram stōwe to stōwe mid rihtum gebindum.',
+	},
+	{
+		number: 'IV',
+		title: 'On Yanxu geworht',
+		text: 'Stæfrǣdere, rǣwere, fremmere, bēodrǣw, and fandunga: ælc dǣl is Wyrd on Yanxu.',
+	},
+];
+---
+
+<div class="wyrd-feature-grid">
+	{features.map((feature) => (
+		<article>
+			<span>{feature.number}</span>
+			<h3>{feature.title}</h3>
+			<p>{feature.text}</p>
+		</article>
+	))}
+</div>

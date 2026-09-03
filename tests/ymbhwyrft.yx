@@ -1,0 +1,9 @@
+# 期：0
+# 期：1
+# 期：1
+# 期：2
+# 期：3
+# 期：5
+引「../src/wyrd.yx」为 Wyrd；
+
+Wyrd.运行（「\n    cræft fib(n) dō\n        gif n <= 1 þonne\n            ġield n;\n        elles\n            ġield fib(n - 1) + fib(n - 2);\n        ende\n    ende\n\n    for n on rīm(0, 6) dō\n        cweþ fib(n);\n    ende\n」）；

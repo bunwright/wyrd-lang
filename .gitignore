@@ -1,0 +1,7 @@
+.DS_Store
+build/
+.yanxu/
+言序.lock
+site/node_modules/
+site/dist/
+site/.astro/

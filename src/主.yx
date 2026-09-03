@@ -1,0 +1,46 @@
+引「标准:环境」为 环境；
+
+引「标准:文件」为 文件；
+
+引「wyrd.yx」为 Wyrd；
+
+法 助言（） 则
+    言 「Wyrd 0.1.0」；
+    言 「Brūcung: wyrd <bōc.wyrd>」；
+    言 「         wyrd fand <bōc.wyrd>」；
+    言 「         wyrd fultum」；
+    言 「」；
+    言 「  fand      fand þā bōc, and ne fremme hīe」；
+    言 「  fultum    ætȳw þisne ræd」；
+终
+
+定 各言 为 环境.参数（）；
+
+若 （长度（各言） 等于 0） 则
+    助言（）；
+否则
+    若 （（各言【0】 等于 「fultum」） 或 （各言【0】 等于 「--help」）） 则
+        助言（）；
+    否则
+        若 （（各言【0】 等于 「gearwung」） 或 （各言【0】 等于 「--version」）） 则
+            言 「Wyrd 0.1.0 (on Yanxu 1.1)」；
+        否则
+            令 只查 为 假；
+            令 路径 为 各言【0】；
+            若 （各言【0】 等于 「fand」） 则
+                若 （长度（各言） 小于 2） 则
+                    抛 「[BEOD001] Ic wēne bōcnaman æfter 'fand'」；
+                终
+                置 只查 为 真；
+                置 路径 为 各言【1】；
+            终
+            定 源码 为 文件.读取（路径）；
+            若 只查 则
+                Wyrd.解析（源码）；
+                言 「Þēos bōc is riht.」；
+            否则
+                Wyrd.运行（源码）；
+            终
+        终
+    终
+终

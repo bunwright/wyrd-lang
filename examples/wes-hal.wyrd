@@ -1,0 +1,9 @@
+# Se forma Wyrd.
+lǣt nama = "middangeard";
+cweþ "Wes hāl, " + nama + "!";
+
+gif lengþu(nama) > 5 þonne
+    cweþ "Þæt word is lang.";
+elles
+    cweþ "Þæt word is scort.";
+ende

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="520" viewBox="0 0 1440 520" role="img" aria-labelledby="title desc">
+  <title id="title">Wyrd</title>
+  <desc id="desc">Wyrd, an Old English programming language written entirely in Yanxu.</desc>
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171310"/>
+      <stop offset="0.55" stop-color="#211814"/>
+      <stop offset="1" stop-color="#35191b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.74" cy="0.44" r="0.55">
+      <stop offset="0" stop-color="#8b3437" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#8b3437" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="rule" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#c69a55" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect width="1440" height="520" rx="18" fill="url(#ground)"/>
+  <rect width="1440" height="520" rx="18" fill="url(#glow)"/>
+  <rect x="1" y="1" width="1438" height="518" rx="17" fill="url(#rule)" stroke="#c69a55" stroke-opacity="0.42"/>
+
+  <g transform="translate(78 58)">
+    <path d="M26 0 52 15v30L26 60 0 45V15L26 0Z" fill="none" stroke="#c69a55" stroke-width="2"/>
+    <path d="M11 13v34M41 13v34M11 22l15 10 15-10M11 41l15-10 15 10" fill="none" stroke="#c69a55" stroke-width="2.6"/>
+    <circle cx="26" cy="30" r="3.5" fill="#8b3437" stroke="#efe2c5"/>
+  </g>
+  <text x="151" y="93" fill="#c69a55" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="4">WYRD · FYRMEST 0.1.0</text>
+
+  <text x="78" y="278" fill="#f5ead2" font-family="Georgia, 'Times New Roman', serif" font-size="174" font-weight="500" letter-spacing="-9">Wyrd</text>
+  <text x="86" y="337" fill="#c69a55" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-style="italic">Wrīt þæt word. Bind þæt gield. Fylġ þǣre wyrde.</text>
+  <line x1="86" y1="382" x2="620" y2="382" stroke="#c69a55" stroke-opacity="0.42"/>
+  <text x="86" y="418" fill="#a99a84" font-family="Arial, sans-serif" font-size="16" letter-spacing="1.2">UNICODE-FRUM · EALL ON YANXU GEWORHT · MIT</text>
+
+  <g transform="translate(802 64)">
+    <rect width="554" height="392" rx="9" fill="#110f0d" stroke="#c69a55" stroke-opacity="0.48"/>
+    <rect x="1" y="1" width="552" height="52" rx="8" fill="#191512"/>
+    <line x1="0" y1="53" x2="554" y2="53" stroke="#c69a55" stroke-opacity="0.24"/>
+    <circle cx="24" cy="27" r="4" fill="#8b3437"/>
+    <circle cx="39" cy="27" r="4" fill="#a77c43"/>
+    <circle cx="54" cy="27" r="4" fill="#66755a"/>
+    <text x="277" y="32" text-anchor="middle" fill="#8d806f" font-family="monospace" font-size="12">wyrd.wyrd</text>
+
+    <g font-family="monospace" font-size="17">
+      <g fill="#62584d" text-anchor="end">
+        <text x="44" y="94">1</text><text x="44" y="128">2</text><text x="44" y="162">3</text>
+        <text x="44" y="196">4</text><text x="44" y="230">5</text><text x="44" y="264">6</text>
+      </g>
+      <text x="72" y="94" fill="#d5a95f">cræft <tspan fill="#b8c8a8">wyrd</tspan><tspan fill="#d7c9b0">(nama) </tspan>dō</text>
+      <text x="72" y="128" fill="#d5a95f">  gif <tspan fill="#d7c9b0">lengþu(nama) &gt; 5 </tspan>þonne</text>
+      <text x="72" y="162" fill="#d5a95f">    ġield <tspan fill="#cf8583">"Wes hāl, "</tspan><tspan fill="#d7c9b0"> + nama;</tspan></text>
+      <text x="72" y="196" fill="#d5a95f">  elles</text>
+      <text x="72" y="230" fill="#d5a95f">    ġield <tspan fill="#cf8583">"Hwæt!"</tspan><tspan fill="#d7c9b0">;</tspan></text>
+      <text x="72" y="264" fill="#d5a95f">  ende</text>
+      <text x="72" y="298" fill="#d5a95f">ende</text>
+    </g>
+    <line x1="0" y1="327" x2="554" y2="327" stroke="#c69a55" stroke-opacity="0.18"/>
+    <text x="25" y="358" fill="#756a5d" font-family="monospace" font-size="13">› wyrd wyrd.wyrd</text>
+    <text x="25" y="381" fill="#b8c8a8" font-family="monospace" font-size="13">Wes hāl, middangeard</text>
+  </g>
+</svg>

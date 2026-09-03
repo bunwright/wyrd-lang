@@ -1,0 +1,4 @@
+# 预败：FREM002
+引「../src/wyrd.yx」为 Wyrd；
+
+Wyrd.运行（「fæst answer = 42; answer = 43;」）；

@@ -1,0 +1,51 @@
+---
+title: Wyrd
+description: Ān nīwe talusprǣc mid ealdum Ængliscum wordum, eall on Yanxu geworht.
+template: splash
+pagefind: false
+head:
+  - tag: meta
+    attrs:
+      property: og:title
+      content: Wyrd — wrīt þæt word; fylġ þǣre wyrde
+  - tag: meta
+    attrs:
+      property: og:description
+      content: Ān nīwe talusprǣc mid ealdum Ængliscum wordum, eall on Yanxu geworht.
+---
+
+import WyrdHero from '../../components/WyrdHero.astro';
+import WyrdFeatures from '../../components/WyrdFeatures.astro';
+
+<WyrdHero />
+
+<section class="wyrd-section" aria-labelledby="sprac-heading">
+  <div class="wyrd-section__head">
+    <p class="wyrd-overline">Sēo sprǣc</p>
+    <h2 id="sprac-heading">Ealde word. Nīwe inneweard.</h2>
+    <p>Wyrd hæfþ lȳtel and clǣne wordhord, ac full mæġen: gebind, cræftas, rǣwas, gecorennys, and ymbhwyrftas.</p>
+  </div>
+  <WyrdFeatures />
+</section>
+
+<section class="wyrd-pipeline" aria-labelledby="pipeline-heading">
+  <div>
+    <p class="wyrd-overline">Se weg</p>
+    <h2 id="pipeline-heading">Fram stafum to dæde.</h2>
+  </div>
+  <ol>
+    <li><span>01</span><strong>Stæfrǣdere</strong><small>Unicode stafu weorþaþ tācnu.</small></li>
+    <li><span>02</span><strong>Rǣwere</strong><small>Tācnu weorþaþ trēow þǣre sprǣce.</small></li>
+    <li><span>03</span><strong>Fremmere</strong><small>Þæt trēow weorþ dǣd.</small></li>
+  </ol>
+</section>
+
+<section class="wyrd-closing">
+  <p class="wyrd-closing__mark" aria-hidden="true">ᚹ</p>
+  <div>
+    <p class="wyrd-overline">Gearu?</p>
+    <h2>Awrit þīne forman bōc.</h2>
+    <p>Set Wyrd, leorn þā ān and twēntig cȳþword, and lǣt þīne geþōht rinnan.</p>
+  </div>
+  <a href="/wyrd-lang/ongin/gesetnys/">To þǣm ongine <span aria-hidden="true">→</span></a>
+</section>

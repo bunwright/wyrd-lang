@@ -1,0 +1,60 @@
+name: Fandunga
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  wyrd:
+    name: Wyrd on Yanxu
+    runs-on: ubuntu-latest
+    env:
+      YANXU_VERSION: 1.1.20
+      YANXU_INSTALL_DIR: ${{ runner.temp }}/yanxu/bin
+    steps:
+      - name: Fruman nim
+        uses: actions/checkout@v6
+
+      - name: Yanxu set
+        run: |
+          curl -fsSL https://get.yanxu.dev | sh
+          echo "$YANXU_INSTALL_DIR" >> "$GITHUB_PATH"
+
+      - name: Fruman fand
+        run: |
+          for source in src/*.yx; do
+            yanxu check "$source"
+          done
+
+      - name: Wyrd fandunga fremme
+        run: yanxu test tests
+
+      - name: Bytubōc timbre
+        run: yanxu compile . -o build/wyrd.yxb --release
+
+  bocland:
+    name: Starlight bōcland
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fruman nim
+        uses: actions/checkout@v6
+
+      - name: Node set
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Nēodþearfe nim
+        working-directory: site
+        run: npm ci
+
+      - name: Bōcland timbre
+        working-directory: site
+        run: npm run build

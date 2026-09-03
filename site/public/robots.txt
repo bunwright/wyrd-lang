@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bunwright.github.io/wyrd-lang/sitemap-index.xml
