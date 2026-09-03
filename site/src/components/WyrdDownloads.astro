@@ -1,0 +1,46 @@
+---
+const releaseBase = 'https://github.com/bunwright/wyrd-lang/releases/latest';
+const downloadBase = `${releaseBase}/download`;
+
+const artifacts = [
+	{ system: 'macOS', arch: 'Apple Silicon', target: 'aarch64-apple-darwin', format: 'tar.gz', mark: '⌘' },
+	{ system: 'macOS', arch: 'Intel', target: 'x86_64-apple-darwin', format: 'tar.gz', mark: '⌘' },
+	{ system: 'Linux', arch: 'ARM64', target: 'aarch64-unknown-linux-gnu', format: 'tar.gz', mark: 'LX' },
+	{ system: 'Linux', arch: 'x86–64', target: 'x86_64-unknown-linux-gnu', format: 'tar.gz', mark: 'LX' },
+	{ system: 'Windows', arch: 'ARM64', target: 'aarch64-pc-windows-msvc', format: 'zip', mark: '⊞' },
+	{ system: 'Windows', arch: 'x86–64', target: 'x86_64-pc-windows-msvc', format: 'zip', mark: '⊞' },
+];
+---
+
+<section class="wyrd-downloads" id="nim-wyrd" aria-labelledby="downloads-heading">
+	<div class="wyrd-downloads__head">
+		<div>
+			<p class="wyrd-overline">Frēolǣstung</p>
+			<h2 id="downloads-heading">Wyrd nim. Nāne foregesette sprǣc.</h2>
+		</div>
+		<p>Ælc bōc is ān selfstandende fremmere. Unbind, fremme, and writ—Yanxu ne þearf on þīnum mǣċene geset bēon.</p>
+	</div>
+	<div class="wyrd-download-grid">
+		{artifacts.map((artifact) => (
+			<a
+				href={`${downloadBase}/wyrd-${artifact.target}.${artifact.format}`}
+				aria-label={`${artifact.system} ${artifact.arch} nim`}
+			>
+				<span class="wyrd-download-mark" aria-hidden="true">{artifact.mark}</span>
+				<span class="wyrd-download-name">
+					<strong>{artifact.system}</strong>
+					<small>{artifact.arch}</small>
+				</span>
+				<code>{artifact.target}</code>
+				<span class="wyrd-download-kind">.{artifact.format} ↓</span>
+			</a>
+		))}
+	</div>
+	<footer class="wyrd-downloads__foot">
+		<span>GitHub Actions timbreþ and fandaþ ælcne fremmere on his āgenre eorþan.</span>
+		<nav aria-label="Frēolǣstunga">
+			<a href={`${downloadBase}/SHA256SUMS`}>SHA-256 handfæstnys</a>
+			<a href={releaseBase}>Ealle lǣstunga</a>
+		</nav>
+	</footer>
+</section>

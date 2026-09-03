@@ -45,5 +45,5 @@ Se fremmere brȳcþ gecnutene lēafscopas. Cræft gehealdaþ þone lēafscop þ�
 `言序.toml` belȳcþ net, process, natiue geīecnes, GUI, clipbord, and systembod. Se bēodrǣw hæfþ filmiht āna wiþ þæt nīehste bōchord.
 
 :::note[Gemǣre 0.1]
-Wyrd 0.1 is fremmed. Bytecode sprǣccræft, LSP, and Wyrd-writen selfgestæþþung ne sind ġiet cȳþed lǣstunga.
+Wyrd 0.1 is fremmed and selfstandende fremmeras sind for six mǣċencynnum gecȳþed. Wyrd-bytubōccræft, LSP, and Wyrd-writen selfgestæþþung ne sind ġiet cȳþed lǣstunga.
 :::

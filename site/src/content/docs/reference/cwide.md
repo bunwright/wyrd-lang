@@ -1,9 +1,9 @@
 ---
 title: Cȳþword
-description: Eall þā ān and twēntig cȳþword Wyrd 0.1.0.
+description: Eall þā ān and twēntig cȳþword Wyrd 0.1.1.
 ---
 
-Wyrd 0.1.0 hæfþ **ān and twēntig cȳþword**. Cȳþword ne magon naman bēon.
+Wyrd 0.1.1 hæfþ **ān and twēntig cȳþword**. Cȳþword ne magon naman bēon.
 
 | Word | Andgiet | Bisen |
 | --- | --- | --- |

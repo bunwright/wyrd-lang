@@ -232,10 +232,11 @@ header.header {
 .wyrd-facts dd { margin: 0; color: var(--sl-color-gray-3); font-size: 0.62rem; font-weight: 720; letter-spacing: 0.12em; text-transform: uppercase; }
 
 .wyrd-code-window {
+	color-scheme: dark;
 	overflow: hidden;
 	border: 1px solid color-mix(in srgb, var(--wyrd-gold) 34%, transparent);
 	border-radius: 0.4rem;
-	background: #12100e;
+	background: #070605;
 	box-shadow: 0 2rem 7rem rgb(0 0 0 / 38%), 1.2rem 1.2rem 0 -1px color-mix(in srgb, var(--wyrd-oxblood) 34%, transparent);
 }
 
@@ -245,13 +246,14 @@ header.header {
 	align-items: center;
 	min-height: 3rem;
 	padding-inline: 1rem;
-	border-bottom: 1px solid #332b24;
-	color: #cbbda5;
+	border-bottom: 1px solid #352d25;
+	background: #0b0908;
+	color: #eadcc2;
 	font-family: var(--sl-font-mono);
 	font-size: 0.68rem;
 }
 
-.wyrd-code-window header small { justify-self: end; color: #71665a; }
+.wyrd-code-window header small { justify-self: end; color: #a99b87; }
 .wyrd-window-lights { display: flex; gap: 0.37rem; }
 
 .wyrd-window-lights i {
@@ -269,14 +271,17 @@ header.header {
 	overflow-x: auto;
 	margin: 0;
 	padding: clamp(1.35rem, 3vw, 2.35rem) 1rem;
+	background-color: #090806;
 	background:
-		linear-gradient(90deg, #181411 0 3.45rem, transparent 3.45rem),
-		radial-gradient(circle at 78% 32%, rgb(139 52 55 / 10%), transparent 17rem);
-	color: #d7c9b0;
+		linear-gradient(90deg, #100d0b 0 3.45rem, transparent 3.45rem),
+		radial-gradient(circle at 78% 32%, rgb(139 52 55 / 8%), transparent 17rem),
+		#090806;
+	color: #f1e6ce;
 	font-family: var(--sl-font-mono);
-	font-size: clamp(0.68rem, 1.15vw, 0.84rem);
+	font-size: clamp(0.78rem, 1.15vw, 0.9rem);
 	line-height: 1.8;
 	tab-size: 4;
+	text-shadow: 0 1px 0 #000;
 }
 
 .wyrd-code-window code { display: block; min-width: 34rem; }
@@ -286,29 +291,124 @@ header.header {
 	display: inline-block;
 	width: 2.4rem;
 	margin-right: 1.2rem;
-	color: #5e544a;
+	color: #9d907e;
 	font-style: normal;
 	text-align: right;
 	user-select: none;
 }
 
-.wyrd-code-window b { color: #d5a95f; font-weight: 650; }
-.wyrd-code-window em { color: #b8c8a8; font-style: normal; }
-.wyrd-code-window q { color: #cf8583; quotes: none; }
+.wyrd-code-window b { color: #f1c36f; font-weight: 700; }
+.wyrd-code-window em { color: #cde3bc; font-style: normal; }
+.wyrd-code-window q { color: #f2aaa5; quotes: none; }
 
 .wyrd-code-window footer {
 	display: grid;
 	gap: 0.45rem;
 	padding: 1rem 1.35rem;
-	border-top: 1px solid #332b24;
-	background: #181411;
+	border-top: 1px solid #352d25;
+	background: #0b0908;
 	font-family: var(--sl-font-mono);
 	font-size: 0.7rem;
 }
 
-.wyrd-code-window footer span { color: #756a5d; }
+.wyrd-code-window footer span { color: #a99b87; }
 .wyrd-code-window footer span i { color: var(--wyrd-gold); font-style: normal; }
-.wyrd-code-window footer strong { color: #c4d0b6; font-weight: 460; }
+.wyrd-code-window footer strong { color: #d8e9ca; font-weight: 560; }
+
+.wyrd-downloads {
+	max-width: 86rem;
+	margin-inline: auto;
+	padding: clamp(5rem, 9vw, 8rem) clamp(1.25rem, 4vw, 4rem);
+	border-block: 1px solid color-mix(in srgb, var(--wyrd-gold) 28%, transparent);
+	background:
+		linear-gradient(120deg, color-mix(in srgb, var(--wyrd-oxblood) 12%, transparent), transparent 48%),
+		color-mix(in srgb, var(--sl-color-black) 82%, #070605);
+}
+
+.wyrd-downloads__head {
+	display: grid;
+	grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+	gap: clamp(2rem, 7vw, 7rem);
+	align-items: end;
+	margin-bottom: 2.8rem;
+}
+
+.wyrd-downloads h2 {
+	max-width: 15ch;
+	margin: 0;
+	color: var(--sl-color-white);
+	font-family: var(--wyrd-display);
+	font-size: clamp(2.65rem, 5vw, 4.8rem);
+	font-weight: 520;
+	letter-spacing: -0.045em;
+	line-height: 0.98;
+}
+
+.wyrd-downloads__head > p {
+	margin: 0;
+	color: var(--sl-color-gray-2);
+	font-size: 0.95rem;
+	line-height: 1.75;
+}
+
+.wyrd-download-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	border-top: 1px solid color-mix(in srgb, var(--wyrd-gold) 28%, transparent);
+	border-inline-start: 1px solid color-mix(in srgb, var(--wyrd-gold) 20%, transparent);
+}
+
+.wyrd-download-grid > a {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	gap: 0.9rem 1rem;
+	align-items: center;
+	min-height: 9.5rem;
+	padding: 1.25rem;
+	border-inline-end: 1px solid color-mix(in srgb, var(--wyrd-gold) 20%, transparent);
+	border-bottom: 1px solid color-mix(in srgb, var(--wyrd-gold) 20%, transparent);
+	background: rgb(255 255 255 / 1.5%);
+	color: var(--sl-color-gray-1);
+	text-decoration: none;
+	transition: background 160ms ease, border-color 160ms ease;
+}
+
+.wyrd-download-grid > a:hover {
+	border-color: color-mix(in srgb, var(--wyrd-gold) 55%, transparent);
+	background: color-mix(in srgb, var(--wyrd-oxblood) 14%, #0b0908);
+}
+
+.wyrd-download-grid > a:focus-visible { outline: 2px solid var(--wyrd-gold); outline-offset: -3px; }
+
+.wyrd-download-mark {
+	display: grid;
+	place-items: center;
+	width: 2.6rem;
+	height: 2.6rem;
+	border: 1px solid color-mix(in srgb, var(--wyrd-gold) 42%, transparent);
+	color: var(--wyrd-gold);
+	font-family: var(--sl-font-mono);
+	font-size: 0.83rem;
+}
+
+.wyrd-download-name { display: grid; gap: 0.1rem; }
+.wyrd-download-name strong { font-family: var(--wyrd-display); font-size: 1.25rem; font-weight: 570; }
+.wyrd-download-name small { color: var(--sl-color-gray-3); font-size: 0.78rem; }
+.wyrd-download-grid code { grid-column: 2 / -1; overflow: hidden; color: var(--sl-color-gray-3); font-size: 0.68rem; text-overflow: ellipsis; white-space: nowrap; }
+.wyrd-download-kind { color: var(--wyrd-gold); font-size: 0.75rem; font-weight: 740; letter-spacing: 0.06em; text-transform: uppercase; }
+
+.wyrd-downloads__foot {
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+	padding-top: 1.25rem;
+	color: var(--sl-color-gray-3);
+	font-size: 0.78rem;
+	line-height: 1.6;
+}
+
+.wyrd-downloads__foot nav { display: flex; gap: 1.5rem; flex-shrink: 0; }
+.wyrd-downloads__foot a { color: var(--sl-color-gray-1); text-underline-offset: 0.2em; }
 
 .wyrd-section,
 .wyrd-pipeline,
@@ -427,6 +527,9 @@ header.header {
 	.wyrd-section__head { grid-template-columns: 1fr; gap: 1.5rem; }
 	.wyrd-feature-grid { grid-template-columns: repeat(2, 1fr); }
 	.wyrd-feature-grid article { min-height: 14rem; }
+	.wyrd-downloads__head { grid-template-columns: 1fr; gap: 1.5rem; }
+	.wyrd-download-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.wyrd-downloads__foot { align-items: flex-start; flex-direction: column; }
 	.wyrd-pipeline { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
@@ -438,6 +541,8 @@ header.header {
 	.wyrd-feature-grid { grid-template-columns: 1fr; }
 	.wyrd-feature-grid article { min-height: 12rem; }
 	.wyrd-feature-grid h3 { margin-top: 2.5rem; }
+	.wyrd-download-grid { grid-template-columns: 1fr; }
+	.wyrd-downloads__foot nav { align-items: flex-start; flex-direction: column; gap: 0.7rem; }
 	.wyrd-pipeline li { grid-template-columns: 2rem 1fr; }
 	.wyrd-pipeline li small { grid-column: 2; }
 	.wyrd-closing { grid-template-columns: 1fr; margin-inline: 1rem; }

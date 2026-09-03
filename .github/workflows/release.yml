@@ -1,0 +1,150 @@
+name: Frēolǣstung
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  unix:
+    name: ${{ matrix.target }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: ubuntu-24.04
+            target: x86_64-unknown-linux-gnu
+          - runner: ubuntu-24.04-arm
+            target: aarch64-unknown-linux-gnu
+          - runner: macos-15-intel
+            target: x86_64-apple-darwin
+          - runner: macos-15
+            target: aarch64-apple-darwin
+    runs-on: ${{ matrix.runner }}
+    env:
+      YANXU_VERSION: 1.1.20
+      YANXU_INSTALL_DIR: /tmp/yanxu/bin
+      WYRD_TARGET: ${{ matrix.target }}
+    steps:
+      - name: Fruman nim
+        uses: actions/checkout@v6
+
+      - name: Yanxu set
+        run: |
+          curl -fsSL https://get.yanxu.dev | sh
+          echo "$YANXU_INSTALL_DIR" >> "$GITHUB_PATH"
+
+      - name: Wyrd fand
+        run: yanxu test tests
+
+      - name: Selfstandende Wyrd timbre
+        run: yanxu compile . -o stage/wyrd --release --standalone
+
+      - name: Selfstandende Wyrd fand
+        run: |
+          stage/wyrd examples/wes-hal.wyrd | tee stage/andswaru.txt
+          grep -Fqx 'Wes hāl, middangeard!' stage/andswaru.txt
+          grep -Fqx 'Þæt word is lang.' stage/andswaru.txt
+
+      - name: Frēolǣstung bind
+        run: |
+          mkdir -p "package/wyrd-$WYRD_TARGET" release
+          cp stage/wyrd README.md LICENSE CHANGELOG.md "package/wyrd-$WYRD_TARGET/"
+          tar -czf "release/wyrd-$WYRD_TARGET.tar.gz" -C package "wyrd-$WYRD_TARGET"
+
+      - name: Frēolǣstung heald
+        uses: actions/upload-artifact@v4
+        with:
+          name: wyrd-${{ matrix.target }}
+          path: release/*.tar.gz
+          if-no-files-found: error
+
+  windows:
+    name: ${{ matrix.target }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-2025
+            target: x86_64-pc-windows-msvc
+          - runner: windows-11-arm
+            target: aarch64-pc-windows-msvc
+    runs-on: ${{ matrix.runner }}
+    env:
+      WYRD_TARGET: ${{ matrix.target }}
+    steps:
+      - name: Fruman nim
+        uses: actions/checkout@v6
+
+      - name: Yanxu set
+        shell: pwsh
+        run: |
+          $env:YANXU_VERSION = '1.1.20'
+          $env:YANXU_INSTALL_DIR = Join-Path $env:RUNNER_TEMP 'yanxu\bin'
+          irm https://get.yanxu.dev/windows | iex
+          Add-Content -Path $env:GITHUB_PATH -Value $env:YANXU_INSTALL_DIR
+
+      - name: Wyrd fand
+        run: yanxu test tests
+
+      - name: Selfstandende Wyrd timbre
+        run: yanxu compile . -o stage/wyrd.exe --release --standalone
+
+      - name: Selfstandende Wyrd fand
+        shell: pwsh
+        run: |
+          $output = & .\stage\wyrd.exe examples\wes-hal.wyrd
+          $output | Tee-Object -FilePath stage\andswaru.txt
+          if ($output -notcontains 'Wes hāl, middangeard!') { throw 'Wyrd output is incomplete.' }
+          if ($output -notcontains 'Þæt word is lang.') { throw 'Wyrd output is incomplete.' }
+
+      - name: Frēolǣstung bind
+        shell: pwsh
+        run: |
+          $package = "package/wyrd-$env:WYRD_TARGET"
+          New-Item -ItemType Directory -Force -Path $package, release | Out-Null
+          Copy-Item stage\wyrd.exe, README.md, LICENSE, CHANGELOG.md -Destination $package
+          Compress-Archive -Path $package -DestinationPath "release/wyrd-$env:WYRD_TARGET.zip"
+
+      - name: Frēolǣstung heald
+        uses: actions/upload-artifact@v4
+        with:
+          name: wyrd-${{ matrix.target }}
+          path: release/*.zip
+          if-no-files-found: error
+
+  release:
+    name: GitHub frēolǣstung
+    needs: [unix, windows]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Ealle fremmeras nim
+        uses: actions/download-artifact@v5
+        with:
+          path: release
+          merge-multiple: true
+
+      - name: Handfæstnys awrit
+        working-directory: release
+        run: sha256sum wyrd-* > SHA256SUMS
+
+      - name: Frēolǣstung cȳþ
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          gh release create "$GITHUB_REF_NAME" release/* \
+            --repo "$GITHUB_REPOSITORY" \
+            --verify-tag \
+            --latest \
+            --title "Wyrd $version" \
+            --notes "Selfstandende Wyrd fremmeras for macOS, Linux, and Windows. Yanxu ne þearf on þǣm mǣċene geset bēon. Fand þā niþerhlādunge wiþ SHA256SUMS."

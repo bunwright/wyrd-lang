@@ -9,6 +9,7 @@ Wyrd underfēhþ clǣne, lȳtle bēc. Ælc fremmendlīc dǣl sceal on Yanxu bēo
 ```sh
 yanxu 试 tests
 yanxu 编 . -o build/wyrd.yxb --release
+yanxu 编 . -o build/wyrd --release --standalone
 cd site && npm ci && npm run build
 ```
 

@@ -5,6 +5,7 @@
 <p align="center">
   <a href="https://github.com/bunwright/wyrd-lang/actions/workflows/ci.yml"><img alt="Fandunga" src="https://github.com/bunwright/wyrd-lang/actions/workflows/ci.yml/badge.svg"></a>
   <a href="https://github.com/bunwright/wyrd-lang/actions/workflows/pages.yml"><img alt="Bōcland" src="https://github.com/bunwright/wyrd-lang/actions/workflows/pages.yml/badge.svg"></a>
+  <a href="https://github.com/bunwright/wyrd-lang/actions/workflows/release.yml"><img alt="Frēolǣstung" src="https://github.com/bunwright/wyrd-lang/actions/workflows/release.yml/badge.svg"></a>
   <img alt="Yanxu" src="https://img.shields.io/badge/worht%20on-Yanxu-c69a55?style=flat-square&labelColor=171310">
   <a href="LICENSE"><img alt="MIT līe" src="https://img.shields.io/badge/l%C4%ABe-MIT-8b3437?style=flat-square&labelColor=171310"></a>
 </p>
@@ -16,6 +17,8 @@
 
 <p align="center">
   <a href="https://bunwright.github.io/wyrd-lang/"><strong>Þā handbōc rǣd →</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/bunwright/wyrd-lang/releases/latest"><strong>Wyrd nim ↓</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="examples/">Bysena geseon</a>
 </p>
@@ -44,7 +47,23 @@ ende
 
 ## Hrædlic ongin
 
-Þū þurft [Yanxu 1.1.20 oþþe nīwran](https://github.com/yanxulang/yanxu).
+Nim ānne selfstandendne fremmere—Yanxu ne þearf on þīnum mǣċene geset bēon.
+
+| | ARM64 | x86–64 |
+| --- | --- | --- |
+| **macOS** | [Apple Silicon](https://github.com/bunwright/wyrd-lang/releases/latest/download/wyrd-aarch64-apple-darwin.tar.gz) | [Intel](https://github.com/bunwright/wyrd-lang/releases/latest/download/wyrd-x86_64-apple-darwin.tar.gz) |
+| **Linux** | [ARM64](https://github.com/bunwright/wyrd-lang/releases/latest/download/wyrd-aarch64-unknown-linux-gnu.tar.gz) | [x86–64](https://github.com/bunwright/wyrd-lang/releases/latest/download/wyrd-x86_64-unknown-linux-gnu.tar.gz) |
+| **Windows** | [ARM64](https://github.com/bunwright/wyrd-lang/releases/latest/download/wyrd-aarch64-pc-windows-msvc.zip) | [x86–64](https://github.com/bunwright/wyrd-lang/releases/latest/download/wyrd-x86_64-pc-windows-msvc.zip) |
+
+Unbind þā bōc, þonne:
+
+```sh
+./wyrd þīn-bōc.wyrd
+```
+
+[Fand þā SHA-256 handfæstnys](https://github.com/bunwright/wyrd-lang/releases/latest/download/SHA256SUMS), oþþe [rǣd þā fullan gesetnysse](https://bunwright.github.io/wyrd-lang/ongin/gesetnys/).
+
+Gif þū of fruman timbrian wille, þū þurft [Yanxu 1.1.20 oþþe nīwran](https://github.com/yanxulang/yanxu):
 
 ```sh
 git clone https://github.com/bunwright/wyrd-lang.git
@@ -71,9 +90,15 @@ Bytubōc timbrian:
 yanxu 编 . -o build/wyrd.yxb --release
 ```
 
+Selfstandendne fremmere timbrian:
+
+```sh
+yanxu 编 . -o build/wyrd --release --standalone
+```
+
 ## Þæt mæġen
 
-| | Wyrd 0.1.0 |
+| | Wyrd 0.1.1 |
 | --- | --- |
 | **Stafas** | Unicode naman; `þ`, `ð`, `æ`, `ġ`, and macronstafas |
 | **Gield** | `tæl`, `word`, `sōþgield`, `nāwiht`, `rǣw`, `cræft` |
@@ -82,7 +107,7 @@ yanxu 编 . -o build/wyrd.yxb --release
 | **Cræftas** | inġehāt, `ġield`, eftclipung, beclysed lēafscop |
 | **Inbyrd** | `rīm`, `lengþu`, `cynn`, `tōworde` |
 | **Gedwolan** | fæste cȳþstafas mid rǣw and stefn |
-| **Timbrung** | 100% Yanxu; interpreter and Yanxu bytubōc |
+| **Timbrung** | 100% Yanxu fruma; six selfstandende fremmeras |
 
 ## Se bygn
 

@@ -17,10 +17,13 @@ Yanxu is sēo sprǣc þe Wyrd timbraþ and fremmeþ. Þæt is þæt sibb:
 | cræftas, cynn, and bytelǣstung | Wyrd stæfrǣdere and rǣwere |
 | pæclīce timbring | Wyrd dǣdtrēow and fremmere |
 | fandung and bytecode | Wyrd CLI and `.wyrd` bēc |
+| selfstandende getimbre | fremmere þe Yanxu ne þearf on þǣm mǣċene |
 
 ## Eall on Yanxu
 
 Ælc fremmendlīc frumbōc Wyrd hæfþ þā `.yx` bōcendunge. Nān ōþer underwriten sprǣc is on þǣre Wyrd fruman.
+
+Þā [selfstandendan frēolǣstunga](/wyrd-lang/ongin/gesetnys/) beclysaþ Wyrd and þone fremminggrund on ānre mǣċenbōc. Þæt ne wendeþ þā fruman: hit is þæt ylce Yanxu-awritene Wyrd, getimbrod for ān gecoren mǣċencynn.
 
 Þæt þæt Wyrd nīewe sprǣc is ne forwyrdeþ þæt hē on ōþerre sprǣce is getimbrod: swā fela sprǣca, Wyrd standaþ on gecorenum hoste, ac hæfþ his āgen wordhord, rǣd, dǣdtrēow, and fremmingsēmantisc.
 

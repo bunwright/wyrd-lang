@@ -37,6 +37,15 @@ jobs:
       - name: Bytubōc timbre
         run: yanxu compile . -o build/wyrd.yxb --release
 
+      - name: Selfstandende Wyrd timbre
+        run: yanxu compile . -o build/wyrd --release --standalone
+
+      - name: Selfstandende Wyrd fand
+        run: |
+          env -i PATH=/usr/bin:/bin build/wyrd examples/wes-hal.wyrd | tee build/andswaru.txt
+          grep -Fqx 'Wes hāl, middangeard!' build/andswaru.txt
+          grep -Fqx 'Þæt word is lang.' build/andswaru.txt
+
   bocland:
     name: Starlight bōcland
     runs-on: ubuntu-latest

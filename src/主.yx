@@ -5,7 +5,7 @@
 引「wyrd.yx」为 Wyrd；
 
 法 助言（） 则
-    言 「Wyrd 0.1.0」；
+    言 「Wyrd 0.1.1」；
     言 「Brūcung: wyrd <bōc.wyrd>」；
     言 「         wyrd fand <bōc.wyrd>」；
     言 「         wyrd fultum」；
@@ -23,7 +23,7 @@
         助言（）；
     否则
         若 （（各言【0】 等于 「gearwung」） 或 （各言【0】 等于 「--version」）） 则
-            言 「Wyrd 0.1.0 (on Yanxu 1.1)」；
+            言 「Wyrd 0.1.1 (on Yanxu 1.1)」；
         否则
             令 只查 为 假；
             令 路径 为 各言【0】；
