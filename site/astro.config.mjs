@@ -10,6 +10,10 @@ export default defineConfig({
 		starlight({
 			title: 'Wyrd',
 			description: 'Sēo handbōc þǣre Wyrd sprǣce.',
+			components: {
+				PageTitle: './src/components/WyrdPageTitle.astro',
+				Footer: './src/components/WyrdFooter.astro',
+			},
 			logo: {
 				src: './src/assets/wyrd-mark.svg',
 				alt: 'Wyrd',
@@ -27,11 +31,6 @@ export default defineConfig({
 				'@fontsource-variable/jetbrains-mono',
 				'./src/styles/custom.css',
 			],
-			editLink: {
-				baseUrl: 'https://github.com/bunwright/wyrd-lang/edit/main/site/',
-			},
-			lastUpdated: true,
-			credits: true,
 			expressiveCode: {
 				shiki: {
 					langs: [wyrd],

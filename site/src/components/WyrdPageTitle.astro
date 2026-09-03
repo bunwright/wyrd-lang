@@ -1,0 +1,9 @@
+---
+import PageTitle from '@astrojs/starlight/components/PageTitle.astro';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/+$/, '');
+const currentPath = Astro.url.pathname.replace(/\/+$/, '');
+const isHome = currentPath === basePath;
+---
+
+{!isHome && <PageTitle />}
