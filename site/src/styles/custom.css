@@ -226,6 +226,31 @@ main:has(.wyrd-hero) > .content-panel:first-of-type {
 .wyrd-button--primary:hover { background: #dab46f; }
 .wyrd-button--quiet { background: rgb(255 255 255 / 2%); }
 
+.wyrd-install-command {
+	display: grid;
+	grid-template-columns: minmax(12rem, 0.42fr) minmax(20rem, 1fr);
+	align-items: center;
+	gap: 1rem 2rem;
+	margin-bottom: 1rem;
+	padding: 1.1rem 1.25rem;
+	border: 1px solid color-mix(in srgb, var(--wyrd-gold) 32%, transparent);
+	border-radius: 0.3rem;
+	background: color-mix(in srgb, var(--wyrd-gold) 5%, transparent);
+}
+
+.wyrd-install-command div { display: grid; gap: 0.2rem; }
+.wyrd-install-command strong { color: var(--sl-color-white); font-family: var(--wyrd-display); }
+.wyrd-install-command small { color: var(--sl-color-gray-2); line-height: 1.45; }
+.wyrd-install-command code {
+	overflow-x: auto;
+	padding: 0.75rem;
+	border: 1px solid color-mix(in srgb, var(--wyrd-gold) 18%, transparent);
+	background: var(--sl-color-black);
+	color: var(--sl-color-gray-1);
+	font-size: 0.72rem;
+	white-space: nowrap;
+}
+
 .wyrd-facts {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -574,6 +599,7 @@ main:has(.wyrd-hero) > .content-panel:first-of-type {
 	.wyrd-feature-grid { grid-template-columns: repeat(2, 1fr); }
 	.wyrd-feature-grid article { min-height: 14rem; }
 	.wyrd-downloads__head { grid-template-columns: 1fr; gap: 1.5rem; }
+	.wyrd-install-command { grid-template-columns: 1fr; }
 	.wyrd-download-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.wyrd-downloads__foot { align-items: flex-start; flex-direction: column; }
 	.wyrd-pipeline { grid-template-columns: 1fr; gap: 2.5rem; }
