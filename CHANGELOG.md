@@ -2,6 +2,10 @@
 
 Eall cȳþendlic awending Wyrd standaþ on þisse bōc.
 
+## Unreleased
+
+- `rīm(ende)` maciaþ nū rǣw fram `0`; `rīm(fruma, ende)` wunaþ swā ǣr.
+
 ## 0.1.1 — 2026-09-03
 
 Sēo forma selfstandende frēolǣstung.
