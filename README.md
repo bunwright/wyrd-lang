@@ -49,6 +49,14 @@ ende
 
 Nim ānne selfstandendne fremmere—Yanxu ne þearf on þīnum mǣċene geset bēon.
 
+On macOS oþþe Linux, þes gesetere āwreceþ þīn mǣċencynn, fandaþ þā SHA-256 handfæstnys, and setteþ `wyrd` on `~/.local/bin`:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/bunwright/wyrd-lang/main/install.sh | sh
+```
+
+Set `WYRD_INSTALL_DIR` for ōþerne stede, for bysene `WYRD_INSTALL_DIR=/usr/local/bin`. Þū meaht ēac [þone gesetere niþerhlādan](install.sh), rǣdan, and þonne fremman. Windows brȳcþ þā handlīcan niþerhlādunga herunder.
+
 | | ARM64 | x86–64 |
 | --- | --- | --- |
 | **macOS** | [Apple Silicon](https://github.com/bunwright/wyrd-lang/releases/latest/download/wyrd-aarch64-apple-darwin.tar.gz) | [Intel](https://github.com/bunwright/wyrd-lang/releases/latest/download/wyrd-x86_64-apple-darwin.tar.gz) |

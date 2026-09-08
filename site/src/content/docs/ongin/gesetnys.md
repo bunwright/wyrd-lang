@@ -5,7 +5,28 @@ description: Nim selfstandende Wyrd, oþþe timbre hit of þǣre Yanxu fruman.
 
 Wyrd 0.1.1 cymþ as selfstandende fremmere. **Yanxu ne þearf on þīnum mǣċene geset bēon** būtan þū Wyrd of þǣre fruman timbrian wille.
 
-## I. Gearolǣste nim
+## I. Mid þǣm gesetere
+
+On macOS oþþe Linux āwreceþ se gesetere þæt mǣċencynn, nimeþ þā gerīsenlīcan frēolǣstunge, fandaþ hīe wiþ hire openre SHA-256 handfæstnysse, and setteþ `wyrd` on `~/.local/bin`:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/bunwright/wyrd-lang/main/install.sh | sh
+```
+
+Þū meaht [þone gesetere sylf rǣdan](https://github.com/bunwright/wyrd-lang/blob/main/install.sh) ǣr þū hine fremme. For ōþerne stede, set `WYRD_INSTALL_DIR`:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/bunwright/wyrd-lang/main/install.sh | WYRD_INSTALL_DIR=/usr/local/bin sh
+```
+
+To settenne gewissne frēolǣstunge, niþerhlād þone gesetere and brūc `--version`:
+
+```sh
+curl -fsSLO https://raw.githubusercontent.com/bunwright/wyrd-lang/main/install.sh
+sh install.sh --version 0.1.1
+```
+
+## II. Gearolǣste handlīce nim
 
 Nim þone fremmere þe þīnum ymbhwyrfte and mǣċencynne gerīseþ:
 
@@ -35,7 +56,7 @@ cd .\wyrd-*
 
 Sēo andswaru sceal `Wyrd 0.1.1 (on Yanxu 1.1)` bēon. Þæt `on Yanxu` cȳþ þā timbrungsprǣce, nā āne foregesette nēodþearfe.
 
-## II. Þā forman bōc fremme
+## III. Þā forman bōc fremme
 
 ```sh
 ./wyrd þīn-bōc.wyrd
@@ -43,7 +64,7 @@ Sēo andswaru sceal `Wyrd 0.1.1 (on Yanxu 1.1)` bēon. Þæt `on Yanxu` cȳþ �
 
 Windows brȳcþ `wyrd.exe` on þǣre ylcan wīsan. [Awrit þā forman bōc](/wyrd-lang/ongin/forma-boc/) and fremme hīe mid þissum bēode.
 
-## III. Of fruman timbre
+## IV. Of fruman timbre
 
 Wyrd sylf, hire bēodrǣw, and hire fandunga sind eall on Yanxu awritene. Gif þū þā fruman bētan oþþe fandian wille, set [Yanxu 1.1.20](https://github.com/yanxulang/yanxu) oþþe nīwran:
 
