@@ -7,7 +7,7 @@ Fēower cræftas sind gebundene on ǣlcere Wyrd fremminge. Hīe sind fæste gebi
 
 | Cræft | Inġehāt | Ġield |
 | --- | --- | --- |
-| `rīm(fruma, ende)` | twēgen unneode ealle getæl | rǣw fram `fruma` oþ būtan `ende` |
+| `rīm(ende)` oþþe `rīm(fruma, ende)` | ān oþþe twēgen unneode ealle getæl | rǣw fram `0` oþþe `fruma` oþ būtan `ende` |
 | `lengþu(gield)` | word oþþe rǣw | getæl þǣra stafa oþþe dǣla |
 | `cynn(gield)` | ænig gield | word mid þǣm gieldcynne |
 | `tōworde(gield)` | ænig gield | gieldes ætȳwnys swā word |
@@ -15,12 +15,16 @@ Fēower cræftas sind gebundene on ǣlcere Wyrd fremminge. Hīe sind fæste gebi
 ## Rīm
 
 ```wyrd
+for n on rīm(3) dō
+    cweþ n;
+ende
+
 for n on rīm(2, 6) dō
     cweþ n;
 ende
 ```
 
-Þis cweþ `2`, `3`, `4`, and `5`. Bēgen gemǣru sceolan ealle, unneode getæl bēon.
+Sēo forme ymbhwyrft cweþ `0`, `1`, and `2`; sēo ōþer cweþ `2`, `3`, `4`, and `5`. Gif `fruma` nis forgiefen, onginþ se rǣw æt `0`. Þā forgiefenan gemǣru sceolan ealle, unneode getæl bēon.
 
 ## Lengþu
 

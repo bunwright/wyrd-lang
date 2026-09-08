@@ -1,0 +1,14 @@
+# 期：[0, 1, 2, 3]
+# 期：[2, 3, 4]
+# 期：0
+# 期：word
+# 期：sōþgield
+引「../src/wyrd.yx」为 Wyrd；
+
+Wyrd.运行（「
+    cweþ rīm(4);
+    cweþ rīm(2, 5);
+    cweþ lengþu([]);
+    cweþ cynn(“wyrd”);
+    cweþ tōworde(sōþ);
+」）；
